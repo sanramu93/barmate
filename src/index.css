@@ -21,6 +21,7 @@
 img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
 /* ---------
@@ -32,16 +33,19 @@ img {
   --ff-quick-sand: "Quicksand", sans-serif;
   --fs-base: 1.6rem;
 
-  --clr-primary-900: #000c0f;
-  --clr-primary-800: #00232e;
-  --clr-primary-700: #003b4c;
-  --clr-primary-600: #00526a;
-  --clr-primary-500: #006a89;
-  --clr-primary-400: #0081a7;
-  --clr-primary-300: #399dbb;
-  --clr-primary-200: #71b9ce;
-  --clr-primary-100: #aad5e2;
-  --clr-primary-50: #e3f1f5;
+  --clr-primary-900: hsl(192, 100%, 3%);
+  --clr-primary-800: hsl(194, 100%, 9%);
+  --clr-primary-700: hsl(193, 100%, 15%);
+  --clr-primary-600: hsl(194, 100%, 21%);
+  --clr-primary-500: hsl(194, 100%, 27%);
+  --clr-primary-400: hsl(194, 100%, 33%);
+  --clr-primary-300: hsl(194, 53%, 48%);
+  --clr-primary-200: hsl(194, 49%, 63%);
+  --clr-primary-100: hsl(194, 49%, 85%);
+  --clr-primary-50: hsl(193, 47%, 93%);
+
+  --br-small: 5px;
+  --br-base: 8px;
 }
 
 /* ---------
@@ -71,6 +75,14 @@ a {
   color: inherit;
 }
 
+input {
+  border: 1px solid var(--clr-primary-200);
+  border-radius: var(--br-small);
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 /* ---------
 // TYPOGRAPHY 
 ------------*/
@@ -80,8 +92,15 @@ a {
 ------------*/
 
 .container {
-  transform: translateY(-300%);
+  transform: translateY(-12rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: all 0.3s ease-out;
+}
+
+.page {
+  width: 80%;
 }
 
 .container--pushed {

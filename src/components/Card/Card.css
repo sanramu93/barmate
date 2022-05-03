@@ -1,0 +1,15 @@
+.card {
+  margin-bottom: 2em;
+  border-radius: var(--br-base);
+  overflow: hidden;
+}
+.card__body {
+  padding: 1.5em;
+  background-color: var(--clr-primary-100);
+}
+
+.card__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
