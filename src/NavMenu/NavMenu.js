@@ -7,7 +7,9 @@ export default function NavMenu() {
     <div className="nav-menu">
       <div className="nav-menu__top">
         <h3>BarMate</h3>
-        <HiMenu />
+        <button className="toggler">
+          <HiMenu />
+        </button>
       </div>
       <nav className="nav-menu__nav">
         <ul>

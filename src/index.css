@@ -1,3 +1,10 @@
+/* https://coolors.co/palette/0081a7-00afb9-fdfcdc-fed9b7-f07167 
+  https://coolors.co/0081a7-00566f-002b38-000000
+  https://coolors.co/0081a7-55abc4-aad5e2-ffffff
+
+
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
 /* ---------
@@ -24,6 +31,17 @@ img {
   font-size: 62.5%;
   --ff-quick-sand: "Quicksand", sans-serif;
   --fs-base: 1.6rem;
+
+  --clr-primary-900: #000c0f;
+  --clr-primary-800: #00232e;
+  --clr-primary-700: #003b4c;
+  --clr-primary-600: #00526a;
+  --clr-primary-500: #006a89;
+  --clr-primary-400: #0081a7;
+  --clr-primary-300: #399dbb;
+  --clr-primary-200: #71b9ce;
+  --clr-primary-100: #aad5e2;
+  --clr-primary-50: #e3f1f5;
 }
 
 /* ---------
@@ -32,7 +50,25 @@ img {
 body {
   font-family: var(--ff-quick-sand);
   font-size: var(--fs-base);
-  background-color: var(--clr-indigo-50);
+  background-color: var(--clr-primary-50);
+  color: var(--clr-primary-800);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: unset;
+  border: unset;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ---------

@@ -1,3 +1,9 @@
+.nav-menu {
+  padding: 0.5em 1em;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-primary-50);
+}
+
 .nav-menu__top {
   display: flex;
   justify-content: space-between;
