@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+/* ---------
+// BASIC RESET 
+------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------
+// CUSTOM PROPS 
+------------*/
+
+:root {
+  font-size: 62.5%;
+  --ff-quick-sand: "Quicksand", sans-serif;
+  --fs-base: 1.6rem;
+}
+
+/* ---------
+// GENERAL 
+------------*/
+body {
+  font-family: var(--ff-quick-sand);
+  font-size: var(--fs-base);
+  background-color: var(--clr-indigo-50);
+}
+
+/* ---------
+// TYPOGRAPHY 
+------------*/
+
+/* ---------
+// LAYOUT
+------------*/
