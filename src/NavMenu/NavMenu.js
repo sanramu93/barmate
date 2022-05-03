@@ -2,24 +2,24 @@ import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import "./NavMenu.css";
 
-export default function NavMenu() {
+export default function NavMenu({ showMenu, toggleMenu }) {
   return (
     <div className="nav-menu">
       <div className="nav-menu__top">
         <h3>BarMate</h3>
-        <button className="toggler">
+        <button className="toggler" onClick={toggleMenu}>
           <HiMenu />
         </button>
       </div>
-      <nav className="nav-menu__nav">
+      <nav className={`nav ${showMenu ? "nav--show" : ""}`}>
         <ul>
-          <li>
+          <li className="nav__item">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="nav__item">
             <Link to="/mybar">MyBar</Link>
           </li>
-          <li>
+          <li className="nav__item">
             <Link to="/tour">Tour</Link>
           </li>
         </ul>
