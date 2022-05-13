@@ -2,7 +2,6 @@ import { BsStar } from "react-icons/bs";
 import "./Card.css";
 
 export default function Card({ drink }) {
-  console.log(drink);
   const { strDrink, strDrinkThumb } = drink;
   return (
     <div className="card">

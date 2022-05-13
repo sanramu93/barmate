@@ -14,15 +14,29 @@ import NavMenu from "./components/NavMenu/NavMenu";
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [allDrinks, setAllDrinks] = useState([]);
+  const [filteredDrinks, setFilteredDrinks] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
   const toggleMenu = () => {
     setShowMenu((prevState) => !prevState);
+  };
+
+  const onSearchInput = (e) => {
+    const { value } = e.target;
+    setSearchInput(value);
+    setFilteredDrinks(allDrinks);
+    setFilteredDrinks((prevDrinks) =>
+      prevDrinks.filter((drink) =>
+        drink.strDrink.toLowerCase().includes(value.toLowerCase())
+      )
+    );
   };
 
   useEffect(() => {
     const getData = async () => {
       const data = await fetchAllCocktails();
       setAllDrinks(data);
+      setFilteredDrinks(data);
     };
     getData();
   }, []);
@@ -32,7 +46,16 @@ export default function App() {
       <NavMenu showMenu={showMenu} toggleMenu={toggleMenu} />
       <main className={`container ${showMenu ? "container--pushed" : ""}`}>
         <Routes>
-          <Route path="/" element={<Home allDrinks={allDrinks} />}>
+          <Route
+            path="/"
+            element={
+              <Home
+                filteredDrinks={filteredDrinks}
+                searchInput={searchInput}
+                onSearchInput={onSearchInput}
+              />
+            }
+          >
             Home
           </Route>
           <Route path="/mybar" element={<MyBar />}>
