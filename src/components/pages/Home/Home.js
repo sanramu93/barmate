@@ -1,5 +1,6 @@
 import { drink } from "../../../apis/theCocktailDb";
 import Card from "../../Card/Card";
+import Loader from "../../Loader/Loader";
 import "./Home.css";
 
 export default function Home({ filteredDrinks, searchInput, onSearchInput }) {
@@ -18,7 +19,7 @@ export default function Home({ filteredDrinks, searchInput, onSearchInput }) {
         value={searchInput}
         onChange={onSearchInput}
       />
-      {displayFilteredDrinks()}
+      {filteredDrinks.length <= 0 ? <Loader /> : displayFilteredDrinks()}
     </section>
   );
 }
