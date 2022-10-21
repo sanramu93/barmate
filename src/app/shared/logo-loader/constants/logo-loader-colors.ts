@@ -1,1 +1,1 @@
-export const LOGO_LOADER_COLORS = ['blue', 'purple', 'green'];
+export const LOGO_LOADER_COLORS = ['purple', 'blue', 'green'];

@@ -7,21 +7,26 @@ import { LOGO_LOADER_COLORS }       from './constants/logo-loader-colors';
   styleUrls: ['./logo-loader.component.scss']
 })
 export class LogoLoaderComponent implements OnInit {
-  @Input() color = 'blue';
+  @Input() color = '';
   public imagePath = '';
   
 
   constructor() { }
 
   ngOnInit(): void {
-    this.setLogoColor(this.color);
+    this.init();
   }
 
-  setLogoColor(color: string) {
-    if(LOGO_LOADER_COLORS.includes(color)) {
-      this.color = color;
-    } 
+  private init() {
+    this.color = this.getColor(this.color, LOGO_LOADER_COLORS);
     this.imagePath = `../../../assets/images/logo/barmate-logo-${this.color}.png`
+  }
+
+  private getColor(color: string, availableColors: string[]) {
+    let newColor = availableColors[0];
+    if(availableColors.includes(color))
+      newColor = color;
+    return newColor;
   }
 
 }
