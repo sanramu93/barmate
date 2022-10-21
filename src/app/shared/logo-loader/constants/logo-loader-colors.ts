@@ -1,0 +1,1 @@
+export const LOGO_LOADER_COLORS = ['blue', 'purple', 'green'];

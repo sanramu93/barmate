@@ -1,0 +1,23 @@
+@import '../../../assets/scss/variables/index';
+
+.container {
+  font-family: $ff-marcellus;
+  font-size: $fs-h2;
+  background-color: lighten($clr-green, 50%);
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: 50%;
+    max-width: 30rem;
+  }
+
+  .title {
+    color: $clr-purple;
+    letter-spacing: 0.1em;
+  }
+}
