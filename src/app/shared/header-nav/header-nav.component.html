@@ -1,0 +1,31 @@
+<header class="header-nav">
+  <div class="top">
+    <div *ngIf="!isSearchMode" class="default">
+      <button class="toggle">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+      <select class="filters">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+      </select>
+      <button class="search-toggle" (click)="onSearchToggle()">
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+    </div>
+    <div *ngIf="isSearchMode" class="search">
+      <button (click)="onSearchToggle()">
+        <fa-icon [icon]="faArrowLeft"></fa-icon>
+      </button>
+      <input class="search-input" type="text" />
+    </div>
+    <button class="settings">
+      <fa-icon [icon]="faEllipsisVertical"></fa-icon>
+    </button>
+  </div>
+  <nav class="nav">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </nav>
+</header>

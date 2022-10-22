@@ -1,6 +1,6 @@
-<section class="container">
+<section class="container" [ngClass]="'bg-' + color">
   <div class="logo-container">
     <img class="logo" [src]="imagePath" alt="Barmate Logo">
-    <h1 class="title">BarMate</h1>
+    <h1 class="title" [ngClass]="'text-' + color">BarMate</h1>
   </div>
 </section>

@@ -1,17 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LOGO_LOADER_COLORS }       from './constants/logo-loader-colors';
+import { LOGO_LOADER_COLORS } from './constants/logo-loader-colors';
 
 @Component({
   selector: 'app-logo-loader',
   templateUrl: './logo-loader.component.html',
-  styleUrls: ['./logo-loader.component.scss']
+  styleUrls: ['./logo-loader.component.scss'],
 })
 export class LogoLoaderComponent implements OnInit {
   @Input() color = '';
   public imagePath = '';
-  
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.init();
@@ -19,14 +18,12 @@ export class LogoLoaderComponent implements OnInit {
 
   private init() {
     this.color = this.getColor(this.color, LOGO_LOADER_COLORS);
-    this.imagePath = `../../../assets/images/logo/barmate-logo-${this.color}.png`
+    this.imagePath = `../../../assets/images/logo/barmate-logo-${this.color}.png`;
   }
 
   private getColor(color: string, availableColors: string[]) {
     let newColor = availableColors[0];
-    if(availableColors.includes(color))
-      newColor = color;
+    if (availableColors.includes(color)) newColor = color;
     return newColor;
   }
-
 }

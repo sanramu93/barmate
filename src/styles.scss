@@ -26,10 +26,16 @@ img {
   height: auto;
 }
 
+select, option, button, input {
+  font-size: inherit;
+  color: inherit;
+}
 
+// GLOBAL STYLES
 
 body {
   font-family: $ff-worksans;
   font-size: $fs-base;
   color: $clr-purple-dark;
 }
+

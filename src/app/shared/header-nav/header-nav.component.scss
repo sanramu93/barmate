@@ -1,0 +1,36 @@
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0 1em;
+}
+
+.header-nav {
+  padding: 1em 0.5em;
+  background-color: aqua;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    .default {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .search-input {
+        width: 100%;
+      }
+    }
+    .search {
+      display: flex;
+      width: 100%;
+      .search-input {
+        width: 100%;
+        height: 2.5rem;
+      }
+    }
+  }
+  .nav {
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+}
